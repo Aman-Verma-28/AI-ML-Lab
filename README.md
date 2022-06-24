@@ -5,4 +5,6 @@
     pip install django
     pip install djangorestframework
     code .
-    
+    cd webscoket/websocket_ml/
+    python manage.py runserver
+
