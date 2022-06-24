@@ -8,8 +8,14 @@
     pip install djangorestframework
     code .
     cd webscoket/websocket_ml/
+    python manage.py makemigrations
     python manage.py migrate
     python manage.py runserver
+    
+## After Setup ##
+    
+    python manage.py createsuperuser
+    
 
 
 ## For Linux
