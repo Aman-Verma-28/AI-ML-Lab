@@ -3,7 +3,6 @@ from django.urls import path, include
 from .views import *
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
     path('api/youtube/v1',  YoutubeAPI.as_view(), name='youtubeAPI'),
     path('api/calendar/v1',  CalendarAPI.as_view(), name='calendarAPI'),
 
