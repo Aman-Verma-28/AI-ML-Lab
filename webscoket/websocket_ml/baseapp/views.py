@@ -5,6 +5,8 @@ from django.http import JsonResponse
 from django.shortcuts import render
 from langcodes import Language
 from rest_framework.views import APIView
+from rest_framework.permissions import IsAuthenticated
+from .custom_auth import CustomAuthentication
 # Create your views here.
 
 class YoutubeAPI(APIView):
@@ -68,3 +70,9 @@ class CalendarAPI(APIView):
     "patient_id": 196
 }
 '''
+
+class TestView(APIView):
+    permission_classes = [IsAuthenticated]
+    authentication_classes = [CustomAuthentication]
+    def get(self, request):
+        return JsonResponse("Success", status=200)
