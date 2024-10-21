@@ -90,7 +90,7 @@ class TurnitinView(APIView):
 
         burp0_data = {"is_free": "false", "plagchecker_locale": "en", "product_paper_type": "1", "title": '', "text": str(text_to_check)}
 
-        r = requests.post(burp0_url, headers=burp0_headers, cookies=burp0_cookies, data=burp0_data)
+        r = requests.post(burp0_url, headers=burp0_headers, cookies=burp0_cookies, data=burp0_data, timeout=60)
         text_list = text_to_check.split(' ')
         result = json.loads(r.text)
         cur = []
