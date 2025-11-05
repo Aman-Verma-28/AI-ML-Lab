@@ -1,5 +1,7 @@
 # AI-ML-Lab
 
+A Django-based web application framework for AI and Machine Learning applications with real-time communication capabilities.
+
 ## For Windows
 
     git clone https://github.com/Aman-Verma-28/AI-ML-Lab.git
